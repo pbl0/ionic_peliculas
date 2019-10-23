@@ -1,7 +1,13 @@
 
+ion-content{
+    --background: #E1E2E1;
+}
 ion-toolbar{
     --background: #232F3E;
     color: white;
+}
+ion-card, ion-list, ion-item{
+    --background: white;
 }
 
 .azul{
@@ -11,6 +17,12 @@ ion-toolbar{
 
 @media (orientation: landscape) {
     .foto{
+        display: none;
+    }
+  }
+
+  @media (orientation: portrait) {
+    .avatar{
         display: none;
     }
   }

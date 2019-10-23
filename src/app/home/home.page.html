@@ -3,21 +3,25 @@
     <ion-title>
         <ion-icon name="film"></ion-icon> Peliculas
     </ion-title>
+    
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-input [(ngModel)]="busqueda" placeholder="Buscar pelicula"><ion-icon name="search"></ion-icon></ion-input>
+  
   
   <ion-grid>
+      <ion-input [(ngModel)]="busqueda" placeholder="Buscar pelicula"><ion-icon name="search"></ion-icon></ion-input>
     <ion-row>
       <ion-col *ngFor="let pelicula of peliculas | async"  size-xs="12" size-sm="6" size-md="4">
-        <ion-card color="" *ngIf="busqueda == null || pelicula.titulo.includes(busqueda)">
+        <ion-card *ngIf="busqueda == null || pelicula.titulo.includes(busqueda)">
             
             <ion-item class="azul">
-            <ion-avatar item-start>
-                <!-- <img [src]="pelicula.img"> -->
-            </ion-avatar>
+            <a href="https://www.imdb.com/find?ref_=nv_sr_fn&q={{ pelicula.titulo }}&s=all" target="_blank" rel="noopener noreferrer">
+              <ion-avatar item-start>
+                <img class="avatar" [src]="pelicula.img">
+              </ion-avatar>
+            </a>
             &nbsp;
             <h5> {{ pelicula.titulo }}</h5>
             
