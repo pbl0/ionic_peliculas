@@ -8,3 +8,9 @@ ion-toolbar{
     --background: #232F3E;
     color: white;
 }
+
+@media (orientation: landscape) {
+    .foto{
+        display: none;
+    }
+  }

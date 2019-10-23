@@ -7,10 +7,12 @@
 </ion-header>
 
 <ion-content>
+  <ion-input [(ngModel)]="busqueda" placeholder="Buscar pelicula"><ion-icon name="search"></ion-icon></ion-input>
+  
   <ion-grid>
     <ion-row>
       <ion-col *ngFor="let pelicula of peliculas | async"  size-xs="12" size-sm="6" size-md="4">
-        <ion-card color="">
+        <ion-card color="" *ngIf="busqueda == null || pelicula.titulo.includes(busqueda)">
             
             <ion-item class="azul">
             <ion-avatar item-start>
