@@ -1,28 +1,36 @@
 
-ion-content{
-    --background: #E1E2E1;
-}
+
 ion-toolbar{
     --background: #232F3E;
     color: white;
 }
-ion-card, ion-list, ion-item{
-    --background: white;
-}
+
 
 .azul{
     --background: #232F3E;
     color: white;
 }
 
-@media (orientation: landscape) {
+@media (orientation: landscape){
     .foto{
         display: none;
     }
   }
 
-  @media (orientation: portrait) {
-    .avatar{
-        display: none;
-    }
-  }
+@media (orientation: portrait){
+.avatar{
+    display: none;
+}
+}
+
+ion-card, ion-list, ion-item{
+    --background: white;
+}
+
+
+@media (max-width: 600px){
+ion-content{
+    --background: #E1E2E1;
+}
+    
+}
